@@ -1,0 +1,2 @@
+# Check_bilibili_user_anime_subscription
+本人的第一个小小的尝试项目
