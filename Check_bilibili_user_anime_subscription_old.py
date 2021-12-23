@@ -1,7 +1,7 @@
 import requests;
 import sys;
 
-f = open ("Python_Files/temp.txt", "w+", encoding = "utf-8");
+f = open ("temp.txt", "w+", encoding = "utf-8");
 
 UTFU1 = "https://api.bilibili.com/x/web-interface/search/type?search_type=bili_user&keyword=";
 UTFU2 = "https://api.bilibili.com/x/space/acc/info?mid=";
