@@ -9,9 +9,9 @@ UTFU2 = "https://api.bilibili.com/x/space/acc/info?mid="; #用户信息页
 url = "https://api.bilibili.com/x/space/bangumi/follow/list?type=1&vmid="; #用户追番列表
 headers = {'User-agent':'Mozilla/5.0'};
 
-input_choice = int (input ("你想以哪种方式进行找到该用户?\n[1]用户名 [2]用户uid (受限于b站搜索机制, 使用用户名搜索的结果可能与预期不一致)\n"));
+input_choice = input ("你想以哪种方式进行找到该用户?\n[1]用户名 [2]用户uid (受限于b站搜索机制, 使用用户名搜索的结果可能与预期不一致)\n");
 
-if (input_choice == 1):
+if (input_choice == "1"):
     username = input ("用户名: ");
     UTFU1 += username;
     Ures = requests.get (url = UTFU1, headers = headers);
@@ -23,7 +23,7 @@ if (input_choice == 1):
         sys.exit (1);
     uid = str (Udata["data"]["result"][0]["mid"]);
 
-elif (input_choice == 2):
+elif (input_choice == "2"):
     uid = input ("uid: ");
 
 else:
