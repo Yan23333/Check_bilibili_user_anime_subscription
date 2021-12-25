@@ -63,7 +63,7 @@ while (True):
     head = 0;
     while (True):
         loc1 = res.text.find ('"season_type_name":"番剧"', head); #从前一次搜索到的地方往后搜索
-        if (loc1 == -1): #当前页面番剧扫描完毕 跳出循环
+        if (loc1 == -1): #当前页面番剧扫描完毕跳出循环
             break;
         loc1 += 33;
         loc2 = res.text.find ('"', loc1);
