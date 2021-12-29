@@ -1,10 +1,12 @@
+# 练习用class写得花里胡哨的
+
 import requests;
 import json;
 import sys;
 import os;
 
 f = open ("data.txt", "w+", encoding = "utf-8");
-headers = {'User-agent':'Mozilla/5.0'};
+headers = {"User-agent":"Mozilla/5.0"};
 
 class GetUid (object):
     def __init__ (self):
