@@ -33,7 +33,7 @@ class GetData (object):
         self.uid = uid;
     def BasicUserProfile (self):
         url = "https://api.bilibili.com/x/space/acc/info?mid=";
-        url += uid;
+        url += self.uid;
         res = requests.get (url = url, headers = headers);
         res.encoding = "utf-8";
         data = json.loads (res.text);
@@ -48,7 +48,7 @@ class GetData (object):
         records = 0;
         while (True):
             pages += 1;
-            url = url + uid + "&pn=" + str (pages);
+            url = url + self.uid + "&pn=" + str (pages);
             res = requests.get (url = url, headers = headers);
             res.encoding = "utf-8";
             data = json.loads (res.text);
