@@ -43,11 +43,11 @@ class GetData (object):
             sys.exit (1);
         f.write ("用户名: " + data["data"]["name"] +", uid: " + str (data["data"]["mid"]) + ";\n\n追番列表:\n");
     def bangumi (self):
-        url = "https://api.bilibili.com/x/space/bangumi/follow/list?type=1&vmid=";
         pages = 0;
         records = 0;
         while (True):
             pages += 1;
+            url = "https://api.bilibili.com/x/space/bangumi/follow/list?type=1&vmid=";
             url = url + self.uid + "&pn=" + str (pages);
             res = requests.get (url = url, headers = headers);
             res.encoding = "utf-8";
